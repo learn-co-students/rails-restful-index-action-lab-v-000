@@ -38,3 +38,195 @@ Started GET "/" for ::1 at 2015-11-18 13:37:10 -0600
 Processing by Rails::WelcomeController#index as HTML
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
 Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: Defining a route where `to` is a controller without an action is deprecated. Please change `to: 'students'` to `controller: 'students'`. (called from block in <top (required)> at /Users/Lucas/Development/rails/rails-restful-index-action-lab-v-000/config/routes.rb:3)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for ::1 at 2016-03-28 13:40:08 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
+Completed 200 OK in 23ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for ::1 at 2016-03-28 13:40:12 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    1: <%= Student.all.each do |student| %>
+    2: <% student.to_s %>
+    3: <% end %>
+  app/models/student.rb:3:in `to_s'
+  app/views/students/index.html.erb:2:in `block in _app_views_students_index_html_erb___210797787430070523_70364658416140'
+  app/views/students/index.html.erb:1:in `_app_views_students_index_html_erb___210797787430070523_70364658416140'
+
+
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.2ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (59.8ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (138.1ms)
+
+
+Started GET "/students" for ::1 at 2016-03-28 13:42:27 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    1: <% @students.each do |student| %>
+    2: <%= student.to_s %>
+    3: <% end %>
+  app/models/student.rb:3:in `to_s'
+  app/views/students/index.html.erb:2:in `block in _app_views_students_index_html_erb___2050704316997707708_70212708630780'
+  app/views/students/index.html.erb:1:in `_app_views_students_index_html_erb___2050704316997707708_70212708630780'
+
+
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (63.5ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (58.3ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (137.2ms)
+
+
+Started GET "/students" for ::1 at 2016-03-28 13:42:40 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    1: <% @students.each do |student| %>
+    2: <%= student.to_s %>
+    3: <% end %>
+  app/models/student.rb:3:in `to_s'
+  app/views/students/index.html.erb:2:in `block in _app_views_students_index_html_erb___2050704316997707708_70212708630780'
+  app/views/students/index.html.erb:1:in `_app_views_students_index_html_erb___2050704316997707708_70212708630780'
+
+
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.6ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.3ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (53.3ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.3ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (121.6ms)
+
+
+Started GET "/students" for ::1 at 2016-03-28 13:43:17 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.1ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    1: <% @students.each do |student| %>
+    2: <%= student.first_name + " " + student.last_name %>
+    3: <% end %>
+  app/views/students/index.html.erb:2:in `block in _app_views_students_index_html_erb___2050704316997707708_70212678114360'
+  app/views/students/index.html.erb:1:in `_app_views_students_index_html_erb___2050704316997707708_70212678114360'
+
+
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.3ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (53.3ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/Lucas/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (114.7ms)
+
+
+Started GET "/students" for ::1 at 2016-03-28 13:44:07 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 1050ms (Views: 1049.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-28 13:44:08 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-03-28 13:44:08 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-03-28 13:44:08 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-28 13:44:08 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-28 13:44:08 -0400
+
+
+Started GET "/students" for ::1 at 2016-03-28 13:44:11 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.7ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 51ms (Views: 48.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-28 13:44:11 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-03-28 13:44:11 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-03-28 13:44:11 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-28 13:44:11 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-28 13:44:11 -0400
+
+
+Started GET "/students" for ::1 at 2016-03-28 13:44:29 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-28 13:44:29 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-03-28 13:44:29 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-03-28 13:44:29 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-28 13:44:29 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-28 13:44:29 -0400
