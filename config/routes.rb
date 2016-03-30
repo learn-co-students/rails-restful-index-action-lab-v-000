@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "/students", to: "static#index" 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -19,7 +20,7 @@ Rails.application.routes.draw do
   #     member do
   #       get 'short'
   #       post 'toggle'
-  #     end
+  #     
   #
   #     collection do
   #       get 'sold'
