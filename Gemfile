@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'pry-rails', :group => :development, group: :test
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -31,4 +32,3 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
 end
-
