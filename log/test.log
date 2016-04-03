@@ -126,3 +126,563 @@
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2015-11-18 19:50:32.207493"], ["updated_at", "2015-11-18 19:50:32.207493"]]
   [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
   [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (3.2ms)[0m  DELETE FROM "students";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'students';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/students" for 127.0.0.1 at 2016-04-03 13:43:06 -0400
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 17:43:06.245217"], ["updated_at", "2016-04-03 17:43:06.245217"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Lindsey"], ["last_name", "Stirling"], ["created_at", "2016-04-03 17:43:06.250025"], ["updated_at", "2016-04-03 17:43:06.250025"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/students" for 127.0.0.1 at 2016-04-03 13:43:06 -0400
+  [1m[35m (2.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 17:43:06.260036"], ["updated_at", "2016-04-03 17:43:06.260036"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 17:43:06.266105"], ["updated_at", "2016-04-03 17:43:06.266105"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (6.3ms)[0m  DELETE FROM "students";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (3.3ms)[0m  DELETE FROM sqlite_sequence where name = 'students';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/students" for 127.0.0.1 at 2016-04-03 18:03:14 -0400
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 22:03:14.852059"], ["updated_at", "2016-04-03 22:03:14.852059"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Lindsey"], ["last_name", "Stirling"], ["created_at", "2016-04-03 22:03:14.858440"], ["updated_at", "2016-04-03 22:03:14.858440"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/students" for 127.0.0.1 at 2016-04-03 18:03:14 -0400
+  [1m[35m (2.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 22:03:14.866269"], ["updated_at", "2016-04-03 22:03:14.866269"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 22:03:14.871315"], ["updated_at", "2016-04-03 22:03:14.871315"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (5.9ms)[0m  DELETE FROM "students";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (3.2ms)[0m  DELETE FROM sqlite_sequence where name = 'students';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/students" for 127.0.0.1 at 2016-04-03 19:08:48 -0400
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:08:48.889076"], ["updated_at", "2016-04-03 23:08:48.889076"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Lindsey"], ["last_name", "Stirling"], ["created_at", "2016-04-03 23:08:48.897315"], ["updated_at", "2016-04-03 23:08:48.897315"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/students" for 127.0.0.1 at 2016-04-03 19:08:48 -0400
+  [1m[35m (2.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:08:48.904672"], ["updated_at", "2016-04-03 23:08:48.904672"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:08:48.909607"], ["updated_at", "2016-04-03 23:08:48.909607"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (3.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (6.3ms)[0m  DELETE FROM "students";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (3.4ms)[0m  DELETE FROM sqlite_sequence where name = 'students';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/students" for 127.0.0.1 at 2016-04-03 19:10:26 -0400
+Processing by StaticController#index as HTML
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:10:26.377726"], ["updated_at", "2016-04-03 23:10:26.377726"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Lindsey"], ["last_name", "Stirling"], ["created_at", "2016-04-03 23:10:26.384785"], ["updated_at", "2016-04-03 23:10:26.384785"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/students" for 127.0.0.1 at 2016-04-03 19:10:26 -0400
+Processing by StaticController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (2.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:10:26.393189"], ["updated_at", "2016-04-03 23:10:26.393189"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:10:26.398425"], ["updated_at", "2016-04-03 23:10:26.398425"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (3.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (6.3ms)[0m  DELETE FROM "students";
+  [1m[36m (0.3ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (3.1ms)[0m  DELETE FROM sqlite_sequence where name = 'students';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/students" for 127.0.0.1 at 2016-04-03 19:12:36 -0400
+Processing by StaticController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"
+  Rendered static/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 1756ms (Views: 1743.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:12:38.234453"], ["updated_at", "2016-04-03 23:12:38.234453"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Lindsey"], ["last_name", "Stirling"], ["created_at", "2016-04-03 23:12:38.242509"], ["updated_at", "2016-04-03 23:12:38.242509"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/students" for 127.0.0.1 at 2016-04-03 19:12:38 -0400
+Processing by StaticController#index as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered static/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (8.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:12:38.280688"], ["updated_at", "2016-04-03 23:12:38.280688"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:12:38.286440"], ["updated_at", "2016-04-03 23:12:38.286440"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (3.4ms)[0m  DELETE FROM "students";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  DELETE FROM sqlite_sequence where name = 'students';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/students" for 127.0.0.1 at 2016-04-03 19:13:52 -0400
+Processing by StaticController#index as HTML
+  [1m[35mStudent Load (0.1ms)[0m  SELECT "students".* FROM "students"
+  Rendered static/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 164ms (Views: 150.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:13:52.805264"], ["updated_at", "2016-04-03 23:13:52.805264"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Lindsey"], ["last_name", "Stirling"], ["created_at", "2016-04-03 23:13:52.808447"], ["updated_at", "2016-04-03 23:13:52.808447"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/students" for 127.0.0.1 at 2016-04-03 19:13:52 -0400
+Processing by StaticController#index as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered static/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (2.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:13:52.820107"], ["updated_at", "2016-04-03 23:13:52.820107"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (4.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:13:52.828082"], ["updated_at", "2016-04-03 23:13:52.828082"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.6ms)[0m  DELETE FROM "students";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'students';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/students" for 127.0.0.1 at 2016-04-03 19:14:26 -0400
+Processing by StaticController#index as HTML
+  [1m[35mStudent Load (0.1ms)[0m  SELECT "students".* FROM "students"
+  Rendered static/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 149ms (Views: 140.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:14:26.535550"], ["updated_at", "2016-04-03 23:14:26.535550"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Lindsey"], ["last_name", "Stirling"], ["created_at", "2016-04-03 23:14:26.539383"], ["updated_at", "2016-04-03 23:14:26.539383"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/students" for 127.0.0.1 at 2016-04-03 19:14:26 -0400
+Processing by StaticController#index as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered static/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (2.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:14:26.551081"], ["updated_at", "2016-04-03 23:14:26.551081"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:14:26.555543"], ["updated_at", "2016-04-03 23:14:26.555543"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (5.2ms)[0m  DELETE FROM "students";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  DELETE FROM sqlite_sequence where name = 'students';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/students" for 127.0.0.1 at 2016-04-03 19:14:53 -0400
+Processing by StaticController#index as HTML
+  [1m[35mStudent Load (0.1ms)[0m  SELECT "students".* FROM "students"
+  Rendered static/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 157ms (Views: 147.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:14:53.744948"], ["updated_at", "2016-04-03 23:14:53.744948"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Lindsey"], ["last_name", "Stirling"], ["created_at", "2016-04-03 23:14:53.748947"], ["updated_at", "2016-04-03 23:14:53.748947"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/students" for 127.0.0.1 at 2016-04-03 19:14:53 -0400
+Processing by StaticController#index as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered static/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+  [1m[35m (2.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:14:53.759984"], ["updated_at", "2016-04-03 23:14:53.759984"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (3.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:14:53.765992"], ["updated_at", "2016-04-03 23:14:53.765992"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.5ms)[0m  DELETE FROM "students";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'students';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/students" for 127.0.0.1 at 2016-04-03 19:15:52 -0400
+Processing by StaticController#index as HTML
+  [1m[35mStudent Load (0.1ms)[0m  SELECT "students".* FROM "students"
+  Rendered static/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 157ms (Views: 147.1ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:15:52.563400"], ["updated_at", "2016-04-03 23:15:52.563400"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Lindsey"], ["last_name", "Stirling"], ["created_at", "2016-04-03 23:15:52.566887"], ["updated_at", "2016-04-03 23:15:52.566887"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/students" for 127.0.0.1 at 2016-04-03 19:15:52 -0400
+Processing by StaticController#index as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered static/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (2.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:15:52.579828"], ["updated_at", "2016-04-03 23:15:52.579828"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:15:52.585176"], ["updated_at", "2016-04-03 23:15:52.585176"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.8ms)[0m  DELETE FROM "students";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'students';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/students" for 127.0.0.1 at 2016-04-03 19:16:18 -0400
+Processing by StaticController#index as HTML
+  [1m[35mStudent Load (0.1ms)[0m  SELECT "students".* FROM "students"
+  Rendered static/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 160ms (Views: 151.1ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:16:18.820250"], ["updated_at", "2016-04-03 23:16:18.820250"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Lindsey"], ["last_name", "Stirling"], ["created_at", "2016-04-03 23:16:18.823805"], ["updated_at", "2016-04-03 23:16:18.823805"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/students" for 127.0.0.1 at 2016-04-03 19:16:18 -0400
+Processing by StaticController#index as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered static/index.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+  [1m[35m (2.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:16:18.839180"], ["updated_at", "2016-04-03 23:16:18.839180"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:16:18.843902"], ["updated_at", "2016-04-03 23:16:18.843902"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.6ms)[0m  DELETE FROM "students";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'students';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/students" for 127.0.0.1 at 2016-04-03 19:16:45 -0400
+Processing by StaticController#index as HTML
+  [1m[35mStudent Load (0.1ms)[0m  SELECT "students".* FROM "students"
+  Rendered static/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 150ms (Views: 140.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:16:45.724396"], ["updated_at", "2016-04-03 23:16:45.724396"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Lindsey"], ["last_name", "Stirling"], ["created_at", "2016-04-03 23:16:45.728703"], ["updated_at", "2016-04-03 23:16:45.728703"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/students" for 127.0.0.1 at 2016-04-03 19:16:45 -0400
+Processing by StaticController#index as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered static/index.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+  [1m[35m (2.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:16:45.741092"], ["updated_at", "2016-04-03 23:16:45.741092"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:16:45.745956"], ["updated_at", "2016-04-03 23:16:45.745956"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.6ms)[0m  DELETE FROM "students";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  DELETE FROM sqlite_sequence where name = 'students';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/students" for 127.0.0.1 at 2016-04-03 19:21:11 -0400
+Processing by StaticController#index as HTML
+  [1m[35mStudent Load (0.1ms)[0m  SELECT "students".* FROM "students"
+  Rendered static/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 149ms (Views: 139.2ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:21:11.814430"], ["updated_at", "2016-04-03 23:21:11.814430"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Lindsey"], ["last_name", "Stirling"], ["created_at", "2016-04-03 23:21:11.817824"], ["updated_at", "2016-04-03 23:21:11.817824"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/students" for 127.0.0.1 at 2016-04-03 19:21:11 -0400
+Processing by StaticController#index as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered static/index.html.erb within layouts/application (95473.7ms)
+Completed 200 OK in 95476ms (Views: 95473.6ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:22:47.303308"], ["updated_at", "2016-04-03 23:22:47.303308"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:22:47.311231"], ["updated_at", "2016-04-03 23:22:47.311231"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.9ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.6ms)[0m  DELETE FROM "students";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'students';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/students" for 127.0.0.1 at 2016-04-03 19:23:30 -0400
+Processing by StaticController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"
+  Rendered static/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 160ms (Views: 150.4ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:23:30.207523"], ["updated_at", "2016-04-03 23:23:30.207523"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Lindsey"], ["last_name", "Stirling"], ["created_at", "2016-04-03 23:23:30.211223"], ["updated_at", "2016-04-03 23:23:30.211223"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/students" for 127.0.0.1 at 2016-04-03 19:23:30 -0400
+Processing by StaticController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered static/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (2.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:23:30.221221"], ["updated_at", "2016-04-03 23:23:30.221221"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:23:30.226367"], ["updated_at", "2016-04-03 23:23:30.226367"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.6ms)[0m  DELETE FROM "students";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'students';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/students" for 127.0.0.1 at 2016-04-03 19:24:08 -0400
+Processing by StaticController#index as HTML
+  [1m[35mStudent Load (0.1ms)[0m  SELECT "students".* FROM "students"
+  Rendered static/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 166ms (Views: 156.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:24:08.557368"], ["updated_at", "2016-04-03 23:24:08.557368"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Lindsey"], ["last_name", "Stirling"], ["created_at", "2016-04-03 23:24:08.560951"], ["updated_at", "2016-04-03 23:24:08.560951"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/students" for 127.0.0.1 at 2016-04-03 19:24:08 -0400
+Processing by StaticController#index as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered static/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (2.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:24:08.570541"], ["updated_at", "2016-04-03 23:24:08.570541"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Daenerys"], ["last_name", "Targaryen"], ["created_at", "2016-04-03 23:24:08.575856"], ["updated_at", "2016-04-03 23:24:08.575856"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
