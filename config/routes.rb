@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   # By default, Rails creates routes for the seven default actions (index, show, new, create, edit, update, and destroy) 
   # for every RESTful route in your application. You can use the :only and :except options to fine-tune this behavior. 
   # The :only option tells Rails to create only the specified routes.
+
+  # Source: http://guides.rubyonrails.org/routing.html#customizing-resourceful-routes
   resources :students, only: :index
 end
