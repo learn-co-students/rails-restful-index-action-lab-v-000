@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'students', to: 'students#students'
+  get 'students', to: 'students#index'
+
+  get 'students/:id', to: 'students#show'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
