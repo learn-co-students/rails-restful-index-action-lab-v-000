@@ -1,5 +1,5 @@
 class CatalogController < ApplicationController
-  def view
+  def index
     @student = Student.all
   end
 end
