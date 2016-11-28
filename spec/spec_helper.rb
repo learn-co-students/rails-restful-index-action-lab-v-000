@@ -15,7 +15,10 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+<<<<<<< HEAD
   config.color = true
+=======
+>>>>>>> 16d1abab4fc38f3da6ed57db97cdb2f959d25632
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
 =begin
