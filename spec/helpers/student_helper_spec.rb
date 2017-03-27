@@ -10,6 +10,3 @@ describe StudentHelper do
     end
   end
 end
-RSpec.describe StudentHelper, :type => :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
-end
