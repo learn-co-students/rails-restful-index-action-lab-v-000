@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  get 'student/students'
+
+  get 'students', to: 'student#students'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
