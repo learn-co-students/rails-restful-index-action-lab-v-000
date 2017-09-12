@@ -29,8 +29,14 @@ In this lab you will walk through how to build each element required to render a
 
 ## Resources
 
-[Rails Routing from the Outside In](http://edgeguides.rubyonrails.org/routing.html) 
+[Rails Routing from the Outside In](http://edgeguides.rubyonrails.org/routing.html)
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-restful-index-action-lab' title='RESTful Index Action Lab'>RESTful Index Action Lab</a> on Learn.co and start learning to code for free.</p>
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-restful-index-action-lab'>RESTful Action Index Lab</a> on Learn.co and start learning to code for free.</p>
+
+http://railscasts.com/episodes/203-routing-in-rails-3?autoplay=true
+
+http://railscasts.com/episodes/232-routing-walkthrough-part-2?view=asciicast
+
+https://learn.co/tracks/full-stack-web-dev-with-react/rails/introduction-to-rails/rails-static-request
