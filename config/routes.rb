@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get '/students', to: 'student#index'
+  #get 'about', to: 'static#about'
+  #REFERENCES USED
+  #1.https://learn.co/tracks/full-stack-web-dev-with-react/rails/introduction-to-rails/rails-static-request
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +58,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
 end
