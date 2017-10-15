@@ -38,3 +38,135 @@ Started GET "/" for ::1 at 2015-11-18 13:37:10 -0600
 Processing by Rails::WelcomeController#index as HTML
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
 Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-14 19:48:20 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
+Completed 200 OK in 15ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-14 20:05:03 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (1.5ms)
+Completed 200 OK in 13ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-10-14 20:05:07 -0400
+Processing by StudentController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template student/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/jim/code/labs/rails-restful-index-action-lab-v-000/app/views"
+):
+  app/controllers/student_controller.rb:4:in `index'
+
+
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (17.4ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (13.5ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (28.7ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-10-14 20:05:46 -0400
+Processing by StudentController#index as HTML
+  [1m[35mStudent Load (0.4ms)[0m  SELECT "students".* FROM "students"
+  Rendered student/index.html.erb within layouts/application (11.7ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined method `firstname' for #<Student:0x00000004c49fb0>
+Did you mean?  first_name
+               first_name?
+               first_name=):
+    1: <% @students.each do |s| %>
+    2:   <%= s.firstname + ' ' + s.last_name %>
+    3: <% end %>
+  app/views/student/index.html.erb:2:in `block in _app_views_student_index_html_erb__3108700397729502802_70252142922440'
+  app/views/student/index.html.erb:1:in `_app_views_student_index_html_erb__3108700397729502802_70252142922440'
+  app/controllers/student_controller.rb:4:in `index'
+
+
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.9ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (13.5ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (28.5ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-10-14 20:06:36 -0400
+Processing by StudentController#index as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered student/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    1: <% @students.each do |s| %>
+    2:   <%= s.first_name + ' ' + s.last_name %>
+    3: <% end %>
+  app/views/student/index.html.erb:2:in `block in _app_views_student_index_html_erb__3108700397729502802_70252148768560'
+  app/views/student/index.html.erb:1:in `_app_views_student_index_html_erb__3108700397729502802_70252148768560'
+  app/controllers/student_controller.rb:4:in `index'
+
+
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.6ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (13.9ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (28.3ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-10-14 20:06:39 -0400
+Processing by StudentController#index as HTML
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students"
+  Rendered student/index.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    1: <% @students.each do |s| %>
+    2:   <%= s.first_name + ' ' + s.last_name %>
+    3: <% end %>
+  app/views/student/index.html.erb:2:in `block in _app_views_student_index_html_erb__3108700397729502802_70252148768560'
+  app/views/student/index.html.erb:1:in `_app_views_student_index_html_erb__3108700397729502802_70252148768560'
+  app/controllers/student_controller.rb:4:in `index'
+
+
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.2ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.0ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jim/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (27.3ms)
+  [1m[36mStudent Load (1.1ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  [1m[35mStudent Load (0.5ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 1]]
