@@ -3,9 +3,4 @@ class StudentsController < ApplicationController
     @students = Student.all
   end
 
-  def teachers
-
-  end
-
-
 end
