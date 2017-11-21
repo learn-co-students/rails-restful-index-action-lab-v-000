@@ -1,7 +1,12 @@
 class StudentsController < ApplicationController
 
-  def students
+  #better
+  def index
     @students = Student.all
-    render "index"
   end
+
+  # def students
+  #   @students = Student.all
+  #   render "index" #turns out you don't even have to do this explicitly!
+  # end
 end
