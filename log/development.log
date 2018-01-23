@@ -148,3 +148,126 @@ Migrating to CreateStudents (1)
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Morty"], ["last_name", "Smith"], ["created_at", "2017-11-28 15:01:02.845645"], ["updated_at", "2017-11-28 15:01:02.845645"]]
   [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.2ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Rick"], ["last_name", "Sanchez"], ["created_at", "2018-01-23 17:34:13.933997"], ["updated_at", "2018-01-23 17:34:13.933997"]]
+  [1m[35m (43.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Morty"], ["last_name", "Smith"], ["created_at", "2018-01-23 17:34:13.981825"], ["updated_at", "2018-01-23 17:34:13.981825"]]
+  [1m[36m (3.6ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-23 15:22:58 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/bretburau/.rvm/gems/ruby-2.3.3/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (1.2ms)
+Completed 200 OK in 63ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student" for 127.0.0.1 at 2018-01-23 15:23:16 -0600
+
+ActionController::RoutingError (No route matches [GET] "/student"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /home/bretburau/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/bretburau/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/bretburau/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/bretburau/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/bretburau/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /home/bretburau/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (27.7ms)
+  Rendered /home/bretburau/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.1ms)
+  Rendered /home/bretburau/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (97.5ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2018-01-23 15:23:20 -0600
+Processing by StudentController#about as HTML
+  Rendered student/about.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/bretburau/dev/rails-restful-index-action-lab-v-000/app/views/student/about.html.erb:4: unterminated regexp meets end of file
+/home/bretburau/dev/rails-restful-index-action-lab-v-000/app/views/student/about.html.erb:4: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/student/about.html.erb:4: unterminated regexp meets end of file
+  app/views/student/about.html.erb:4: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /home/bretburau/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.2ms)
+  Rendered /home/bretburau/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered /home/bretburau/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/bretburau/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.6ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2018-01-23 15:23:36 -0600
+Processing by StudentController#about as HTML
+  Rendered student/about.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Students):
+    1: <h2>Students:</h2>
+    2: <ul>
+    3: <%Students.all.each do |student|%>
+    4:   <li><%=student.name%></li>
+    5: <%end%>
+  app/views/student/about.html.erb:3:in `_app_views_student_about_html_erb__1631441165350260932_43329460'
+
+
+  Rendered /home/bretburau/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /home/bretburau/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (16.4ms)
+  Rendered /home/bretburau/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/bretburau/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (73.1ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2018-01-23 15:24:08 -0600
+Processing by StudentController#about as HTML
+  [1m[35mStudent Load (0.1ms)[0m  SELECT "students".* FROM "students"
+  Rendered student/about.html.erb within layouts/application (39.4ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `name' for #<Student:0x000000053a1560>):
+    1: <h2>Students:</h2>
+    2: <ul>
+    3: <%Student.all.each do |student|%>
+    4:   <li><%=student.name%></li>
+    5: <%end%>
+  app/views/student/about.html.erb:4:in `block in _app_views_student_about_html_erb__1631441165350260932_16799880'
+  app/views/student/about.html.erb:3:in `_app_views_student_about_html_erb__1631441165350260932_16799880'
+
+
+  Rendered /home/bretburau/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (17.6ms)
+  Rendered /home/bretburau/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.2ms)
+  Rendered /home/bretburau/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.8ms)
+  Rendered /home/bretburau/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (77.8ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2018-01-23 15:29:51 -0600
+Processing by StudentController#about as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered student/about.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 821ms (Views: 820.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-23 15:31:20 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/bretburau/.rvm/gems/ruby-2.3.3/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
