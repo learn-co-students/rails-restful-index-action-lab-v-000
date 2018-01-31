@@ -2,7 +2,11 @@ Rails.application.routes.draw do
 
     #resources :students  #sets up teh RESTful routes, does the same as below
     #or could be setup like the following
-       get '/students', to: 'students#index', as: 'students'
+       #
+       resources :students, only: :index
+       # could also write this as the following
+               #resources :students, except: :show, :new, :create, :edit, :udpate, :destroy
+               #get '/students', to: 'students#index', as: 'students'
 
 
 
