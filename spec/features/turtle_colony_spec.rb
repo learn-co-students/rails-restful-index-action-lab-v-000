@@ -8,13 +8,13 @@ describe 'Route to view' do
   end
 end
 
-#describe 'Lots of turtles are shown' do
-#  it 'on the index page' do
-#    Turtle.create!(first_name: "Donatello", last_name: "Donatellie")
-#    Turtle.create!(first_name: "Raphael", last_name: "Rozzaconie")
-#
-#    visit "/turtlepond"
-#
-#    expect(page).to have_content(/(?=.*Donatello)(?=.*Raphael).*/)
-#  end
-#end
+describe 'Lots of turtles are shown' do
+  it 'on the index page' do
+    Turtle.create!(first_name: "Donatello", last_name: "Donatellie")
+    Turtle.create!(first_name: "Raphael", last_name: "Rozzaconie")
+
+    visit "/turtlepond"
+
+    expect(page).to have_content(/(?=.*Donatello)(?=.*Raphael).*/)
+  end
+end
