@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  get 'students', to: "students"
+  get 'students', to: "student#students"
+
 end
