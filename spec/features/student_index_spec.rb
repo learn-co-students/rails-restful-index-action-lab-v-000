@@ -12,7 +12,6 @@ describe 'Multiple students are shown' do
   it 'on the index page' do
     Student.create!(first_name: "Daenerys", last_name: "Targaryen")
     Student.create!(first_name: "Lindsey", last_name: "Stirling")
-
     visit "/students"
 
     expect(page).to have_content(/(?=.*Daenerys)(?=.*Lindsey).*/)
