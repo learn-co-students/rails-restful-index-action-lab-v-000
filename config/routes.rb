@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
           
     get '/students', to: 'students#index'
-         or
+        
 
          # resources :students
 
