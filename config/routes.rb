@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-    get '/students/#show', as 'index'
+    get '/students', to: 'students#index'
 end
