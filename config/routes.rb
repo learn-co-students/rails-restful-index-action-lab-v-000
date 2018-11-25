@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
-  get '/students', to: 'students#index'
+  # non-resourceful route
+
+  # get '/students', to: 'students#index'
+
+  # restricting resourceful routes created
+
+  resources :students, only: :index
 
 end
