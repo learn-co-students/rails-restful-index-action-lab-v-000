@@ -1,0 +1,3 @@
+class LayoutsController < ActionController
+
+end
