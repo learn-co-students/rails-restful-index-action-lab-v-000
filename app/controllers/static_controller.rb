@@ -3,6 +3,6 @@ class StaticController < ApplicationController
     def students 
         #def action
         render "index"
-        #render html.erb page
+        #render html.erb page in views/(object)s folder
     end
 end
